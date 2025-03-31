@@ -35,6 +35,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            flex-direction: column; /* Asegura que los elementos estén alineados verticalmente */
         }
         .container {
             text-align: center;
@@ -61,7 +62,8 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            margin-bottom: 40px; /* Aumentado el margen para más espacio debajo */
+            display: inline-block; /* Asegura que el botón tenga un comportamiento adecuado */
+            margin: 20px auto; /* Centramos el botón y le damos espacio superior/inferior */
         }
         .footer {
             font-size: 0.8em;
