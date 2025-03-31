@@ -7,20 +7,20 @@
 
     <!-- Código del Pixel de Meta -->
     <script>
-        !function(f,b,e,v,n,t,s) {
-            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2372161916484346');  // Reemplaza '2372161916484346' con tu Pixel ID
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2372161916484346');  <!-- Tu Pixel ID aquí -->
         fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=2372161916484346&ev=PageView&noscript=1" />
+        <img height="1" width="1" 
+        src="https://www.facebook.com/tr?id=2372161916484346&ev=PageView&noscript=1"/>
     </noscript>
     <!-- Fin del Pixel de Meta -->
 
@@ -84,8 +84,8 @@
         <!-- Logo de WhatsApp -->
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
 
-        <!-- Botón -->
-        <a href="https://wa.link/bconline" class="button" target="_blank" onclick="fbq('track', 'Lead');">CLICK ACA PARA CREAR TU USUARIO</a>
+        <!-- Botón con código de seguimiento para "Contact" -->
+        <a href="https://wa.link/bconline" class="button" target="_blank" onclick="fbq('track', 'Contact');">CLICK ACA PARA CREAR TU USUARIO</a>
 
         <!-- Subtítulo -->
         <div class="subtitle">¡CARGAS 2.000 Y TE DAMOS 4.000!</div>
