@@ -16,7 +16,7 @@
         s.parentNode.insertBefore(t,s)}(window,document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '2372161916484346');  <!-- Tu Pixel ID aquí -->
-        fbq('track', 'PageView');
+        fbq('track', 'PageView'); <!-- Evento de vista de página -->
     </script>
     <noscript>
         <img height="1" width="1" 
@@ -35,7 +35,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column; /* Asegura que los elementos estén alineados verticalmente */
+            flex-direction: column;
         }
         .container {
             text-align: center;
@@ -48,7 +48,7 @@
         .title {
             font-size: 3em;
             font-weight: bold;
-            margin-bottom: 40px; /* Aumentado el margen para más espacio debajo */
+            margin-bottom: 40px;
         }
         .subtitle {
             font-size: 1.5em;
@@ -62,8 +62,8 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block; /* Asegura que el botón tenga un comportamiento adecuado */
-            margin: 20px auto; /* Centramos el botón y le damos espacio superior/inferior */
+            display: inline-block;
+            margin: 20px auto;
         }
         .footer {
             font-size: 0.8em;
@@ -71,8 +71,8 @@
             margin-top: 40px;
         }
         .whatsapp-logo {
-            width: 100px; /* Tamaño del logo */
-            margin-bottom: 20px; /* Espacio entre el logo y el texto */
+            width: 100px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -84,8 +84,9 @@
         <!-- Logo de WhatsApp -->
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
 
-        <!-- Botón con código de seguimiento para "Contact" -->
-        <a href="https://wa.link/bconline" class="button" target="_blank" onclick="fbq('track', 'Contact');">CLICK ACA PARA CREAR TU USUARIO</a>
+        <!-- Botón con el seguimiento de "Contact" -->
+        <a href="https://wa.link/bconline" class="button" target="_blank" 
+           onclick="fbq('track', 'Contact');">CLICK ACA PARA CREAR TU USUARIO</a>
 
         <!-- Subtítulo -->
         <div class="subtitle">¡CARGAS 2.000 Y TE DAMOS 4.000!</div>
