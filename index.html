@@ -56,7 +56,7 @@
         }
         .subtitle {
             font-size: 1.5em;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
         .button {
             background-color: #00d100;
@@ -67,7 +67,8 @@
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
-            margin-left: 10px; /* Añadir espacio entre el logo y el botón */
+            margin-left: 10px;
+            text-transform: uppercase; /* Hacer el texto en mayúsculas */
         }
         .button-container {
             display: flex;
@@ -82,7 +83,10 @@
         .whatsapp-logo {
             width: 60px; /* Hacer el logo más pequeño */
             height: auto;
-            cursor: pointer;  /* Cambia el cursor cuando pasa sobre el logo */
+            cursor: pointer;
+        }
+        .bottom-text {
+            margin-top: 30px; /* Bajar el texto */
         }
     </style>
 </head>
@@ -102,8 +106,11 @@
             <button id="botónContactar" class="button">Crea tu usuario acá</button>
         </div>
 
-        <!-- Subtítulo -->
-        <div class="subtitle">¡CARGAS 2.000 Y TE DAMOS 4.000!</div>
+        <!-- Subtítulo con el texto actualizado y separado -->
+        <div class="bottom-text">
+            <div>CARGAS 2.000</div>
+            <div>RECIBIS 4.000</div>
+        </div>
 
         <!-- Footer -->
         <div class="footer">© 2025 BC. Todos los derechos reservados.</div>
