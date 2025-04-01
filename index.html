@@ -1,132 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bono de Bienvenida</title>
+    <title>Landing Page - BONUS DE BIENVENIDA</title>
 
-    <!-- Fuente Montserrat desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
-    <!-- Código del Pixel de Meta -->
+    <!-- Meta Pixel Code de Damian -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window,document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2372161916484346');  <!-- Tu Pixel ID aquí -->
-        fbq('track', 'PageView'); <!-- Evento de vista de página -->
+        !function(f, b, e, v, n, t, s) {
+            if(f.fbq) return; n=f.fbq=function(){n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
+            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
+            n.queue=[]; t=b.createElement(e); t.async=!0;
+            t.src=v; s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '635168062745954'); // Pixel de Meta de Damian
+        fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1" 
-        src="https://www.facebook.com/tr?id=2372161916484346&ev=PageView&noscript=1"/>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=635168062745954&ev=PageView&noscript=1" />
     </noscript>
-    <!-- Fin del Pixel de Meta -->
+    <!-- End Meta Pixel Code -->
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #7c3aed;
-            color: white;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #111b21;
+            margin: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
         }
+
         .container {
             text-align: center;
             padding: 20px;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 20px;
-            box-sizing: border-box;
+            max-width: 600px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        .title {
-            font-family: 'Montserrat', sans-serif;  /* Fuente Montserrat en negrita */
-            font-size: 3em;
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
-        .subtitle {
-            font-size: 1.5em;
+
+        h1 {
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
-        .button {
-            background-color: #00d100;
-            color: white;
+
+        p {
             font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .whatsapp-logo {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #25d366; /* Color de WhatsApp */
+            color: white;
             padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
             border-radius: 25px;
             text-decoration: none;
-            font-weight: bold;
             display: inline-block;
-            margin-left: 10px;
-            text-transform: uppercase; /* Hacer el texto en mayúsculas */
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .footer {
-            font-size: 0.8em;
-            color: #999;
-            margin-top: 40px;
-        }
-        .whatsapp-logo {
-            width: 60px; /* Hacer el logo más pequeño */
-            height: auto;
             cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
-        .bottom-text {
-            margin-top: 20px; /* Bajar el texto debajo del botón */
-            font-size: 1.2em;  /* Tamaño de fuente igual al botón */
-            font-weight: bold; /* Poner el texto en negrita */
+
+        .cta-button:hover {
+            background-color: #128c7e; /* Color más oscuro al pasar el cursor */
         }
-        .bottom-text div {
-            margin-bottom: 10px; /* Espacio entre las dos líneas */
+
+        footer {
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            margin-top: 60px;
+            padding-bottom: 80px;
         }
+
+        /* Estilos para las notificaciones */
+        .xpo-notification-wrap {
+            position: fixed;
+            background: #1e1e1e;
+            color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            width: 280px;
+            z-index: 9999;
+            border: 1px solid #333;
+            backdrop-filter: blur(6px);
+            opacity: 0;
+            left: -300px;
+            bottom: 100px;
+            transition: all 0.5s ease;
+        }
+
+        .xpo-notification-wrap.show {
+            left: 20px;
+            opacity: 1;
+        }
+
+        .xpo-img-wrap img {
+            width: 42px;
+            height: 42px;
+            border-radius: 6px;
+            object-fit: cover;
+            border: 1px solid #444;
+        }
+
+        .xpo-col {
+            margin-left: 12px;
+        }
+
+        .xpo-notification-name {
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #fff;
+        }
+
+        .xpo-notification-product {
+            font-size: 0.85em;
+            color: #22d3ee;
+        }
+
+        .xpo-location {
+            font-size: 0.75em;
+            color: #cbd5e1;
+        }
+
+        .xpo-location::before {
+            content: "📍";
+            margin-right: 4px;
+        }
+
     </style>
 </head>
+
 <body>
+    <!-- Contenedor principal -->
     <div class="container">
-        <!-- Título -->
-        <div class="title">BONO DE BIENVENIDA DEL 100%</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
 
-        <!-- Contenedor para los botones y logo -->
-        <div class="button-container">
-            <!-- Logo de WhatsApp a la izquierda del botón -->
-            <a href="https://wa.link/bconline" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
-            </a>
-            
-            <!-- Botón de llamada a la acción -->
-            <button id="botónContactar" class="button">Crea tu usuario acá</button>
+        <!-- Título actualizado -->
+        <h1>🎰 SUPER BONUS ACTIVO 🎰</h1>
+
+        <!-- Subtítulo actualizado -->
+        <p>🏆 Encontra los mejores Sl0ts y atención 24 horas 🏆</p>
+
+        <!-- Caja CTA con texto actualizado -->
+        <div class="cta-box">
+            Nuestro equipo te espera con la mejor atención
         </div>
 
-        <!-- Subtítulo con el texto actualizado y separado -->
-        <div class="bottom-text">
-            <div>CARGAS 2.000</div>
-            <div>RECIBIS 4.000</div>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">© 2025 BC. Todos los derechos reservados.</div>
+        <!-- Botón de llamada a la acción -->
+        <a href="https://wa.link/megabonus" class="cta-button" target="_blank" onclick="fbq('track', 'Contact');">CHATEAR EN WHATSAPP</a>
     </div>
 
-    <!-- Código JavaScript para registrar el evento "Contact" -->
-    <script type="text/javascript">
-        document.getElementById('botónContactar').addEventListener('click', function() {
-            fbq('track', 'Contact');  // Evento "Contact" de Pixel
-            window.location.href = "https://wa.link/bconline";  // Redirección a Whalink
-        }, false);
+    <!-- Barra fija -->
+    <div class="bono-bar" style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #16a34a; color: white; text-align: center; padding: 10px; font-weight: bold;">
+        🎁 ¡Solicítalo ahora por WhatsApp!
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        MEGA BONUS todos los derechos reservados.
+    </footer>
+
+    <!-- Función para mostrar notificaciones -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const config = {
+                productName: "GRACIAS POR CUMPLIR",
+                productImage: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg", // Imagen de ejemplo proporcionada
+                intervalo: 2, // Intervalo de notificaciones (en segundos)
+                duracion: 2, // Duración de cada notificación (en segundos)
+            };
+
+            const newNotification = {
+                name: "MARÍA NUÑEZ",
+                message: "SON UNOS GENIOS SIEMPRE",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" // La imagen que subiste
+            };
+
+            function showNotification() {
+                const noti = document.createElement("div");
+                noti.className = "xpo-notification-wrap";
+                noti.innerHTML = `
+                    <div class="xpo-img-wrap">
+                        <img src="${config.productImage}" alt="Premio">
+                    </div>
+                    <div class="xpo-col">
+                        <div class="xpo-notification-name">${newNotification.name}</div>
+                        <div class="xpo-notification-product">${newNotification.message}</div>
+                    </div>
+                `;
+                document.body.appendChild(noti);
+                setTimeout(() => noti.classList.add("show"), 100);
+                setTimeout(() => {
+                    noti.classList.remove("show");
+                    setTimeout(() => noti.remove(), 500);
+                }, config.duracion * 1000);
+            }
+
+            // Estilos para las notificaciones
+            const styles = `
+                .xpo-notification-wrap {
+                    position: fixed;
+                    background: #1e1e1e;
+                    color: #ffffff;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                    padding: 10px 14px;
+                    display: flex;
+                    align-items: center;
+                    width: 280px;
+                    z-index: 9999;
+                    border: 1px solid #333;
+                    backdrop-filter: blur(6px);
+                    opacity: 0;
+                    left: -300px;
+                    bottom: 100px;
+                    transition: all 0.5s ease;
+                }
+                .xpo-notification-wrap.show { left: 20px; opacity: 1; }
+                .xpo-img-wrap img {
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 6px;
+                    object-fit: cover;
+                    border: 1px solid #444;
+                }
+                .xpo-col { margin-left: 12px; }
+                .xpo-notification-name { font-weight: bold; font-size: 0.9em; color: #fff; }
+                .xpo-notification-product { font-size: 0.85em; color: #22d3ee; }
+            `;
+            const styleTag = document.createElement("style");
+            styleTag.textContent = styles;
+            document.head.appendChild(styleTag);
+
+            // Mostrar notificación
+            showNotification();
+            setInterval(showNotification, config.intervalo * 1000);
+        });
     </script>
+
 </body>
+
 </html>
