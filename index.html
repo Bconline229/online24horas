@@ -84,9 +84,8 @@
         <!-- Logo de WhatsApp -->
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
 
-        <!-- Botón con el seguimiento de "Contact" -->
-        <a href="https://wa.link/bconline" class="button" target="_blank" 
-           onclick="fbq('track', 'Contact');">CLICK ACA PARA CREAR TU USUARIO</a>
+        <!-- Botón de Contacto con seguimiento de Pixel -->
+        <button id="botónContactar" class="button">Contactar</button>
 
         <!-- Subtítulo -->
         <div class="subtitle">¡CARGAS 2.000 Y TE DAMOS 4.000!</div>
@@ -95,9 +94,12 @@
         <div class="footer">© 2025 BC. Todos los derechos reservados.</div>
     </div>
 
-    <!-- Aquí es donde insertas el evento del Pixel para "Contact" -->
-    <script>
-        fbq('track', 'Contact');  <!-- Esto es lo que se ejecutará al hacer clic en el botón -->
+    <!-- Código JavaScript para registrar el evento "Contact" -->
+    <script type="text/javascript">
+        document.getElementById('botónContactar').addEventListener('click', function() {
+            fbq('track', 'Contact');  // Evento "Contact" de Pixel
+            window.location.href = "https://wa.link/bconline";  // Redirección a Whalink
+        }, false);
     </script>
 </body>
 </html>
