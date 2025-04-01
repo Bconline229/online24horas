@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bono de Bienvenida</title>
 
+    <!-- Fuente Montserrat desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
     <!-- Código del Pixel de Meta -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -46,9 +49,10 @@
             box-sizing: border-box;
         }
         .title {
+            font-family: 'Montserrat', sans-serif;  /* Fuente Montserrat en negrita */
             font-size: 3em;
             font-weight: bold;
-            margin-bottom: 40px; /* Aumentado el margen para más espacio debajo */
+            margin-bottom: 40px;
         }
         .subtitle {
             font-size: 1.5em;
@@ -63,7 +67,12 @@
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
-            margin: 20px auto; /* Centramos el botón */
+            margin: 20px auto;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;  /* Espacio entre los botones */
         }
         .footer {
             font-size: 0.8em;
@@ -71,8 +80,9 @@
             margin-top: 40px;
         }
         .whatsapp-logo {
-            width: 100px; /* Tamaño del logo */
-            margin-bottom: 20px; /* Espacio entre el logo y el texto */
+            width: 60px; /* Hacer el logo más pequeño */
+            height: auto;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -81,11 +91,16 @@
         <!-- Título -->
         <div class="title">BONO DE BIENVENIDA DEL 100%</div>
 
-        <!-- Logo de WhatsApp -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
+        <!-- Contenedor para los botones -->
+        <div class="button-container">
+            <!-- Botón de llamada a la acción -->
+            <button id="botónContactar" class="button">Crea tu usuario acá</button>
 
-        <!-- Botón con el texto actualizado: "Crea tu usuario acá" -->
-        <button id="botónContactar" class="button">Crea tu usuario acá</button>
+            <!-- Logo de WhatsApp al lado del botón -->
+            <a href="https://wa.link/bconline" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
+            </a>
+        </div>
 
         <!-- Subtítulo -->
         <div class="subtitle">¡CARGAS 2.000 Y TE DAMOS 4.000!</div>
